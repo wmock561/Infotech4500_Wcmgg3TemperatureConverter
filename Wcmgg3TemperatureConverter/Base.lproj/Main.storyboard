@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Temperature Converter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TemperatureConverterViewController" customModule="Wcmgg3TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert °F to °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urL-GH-bW2">
+                                <rect key="frame" x="109" y="40" width="157.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sZ-C4-yAH">
+                                <rect key="frame" x="148" y="96.5" width="80" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HU-KB-jgK">
+                                <rect key="frame" x="233" y="106" width="19" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmC-f4-2Qb">
+                                <rect key="frame" x="139" y="166" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0P-ND-KWF">
+                                <rect key="frame" x="241" y="171" width="16.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XM5-cU-ciO">
+                                <rect key="frame" x="160.5" y="226" width="55" height="30"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvj-0m-Fr2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4HU-KB-jgK" firstAttribute="centerY" secondItem="3sZ-C4-yAH" secondAttribute="centerY" id="5YA-VP-VvI"/>
+                            <constraint firstItem="urL-GH-bW2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7qz-hd-2vq"/>
+                            <constraint firstItem="cmC-f4-2Qb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="FFe-V9-skg"/>
+                            <constraint firstItem="Y0P-ND-KWF" firstAttribute="centerY" secondItem="cmC-f4-2Qb" secondAttribute="centerY" id="GNU-SE-LZp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cmC-f4-2Qb" secondAttribute="trailing" constant="123" id="IDZ-SD-TUu"/>
+                            <constraint firstItem="XM5-cU-ciO" firstAttribute="top" secondItem="cmC-f4-2Qb" secondAttribute="bottom" constant="30" id="Q12-Ti-tPj"/>
+                            <constraint firstItem="urL-GH-bW2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="QYg-ua-v8P"/>
+                            <constraint firstItem="4HU-KB-jgK" firstAttribute="leading" secondItem="3sZ-C4-yAH" secondAttribute="trailing" constant="5" id="SIg-70-R05"/>
+                            <constraint firstItem="cmC-f4-2Qb" firstAttribute="top" secondItem="3sZ-C4-yAH" secondAttribute="bottom" constant="30" id="aP3-x8-neG"/>
+                            <constraint firstItem="3sZ-C4-yAH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kCd-sj-4zD"/>
+                            <constraint firstItem="XM5-cU-ciO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="liY-qD-Ybs"/>
+                            <constraint firstItem="3sZ-C4-yAH" firstAttribute="top" secondItem="urL-GH-bW2" secondAttribute="bottom" constant="30" id="uJW-eU-tz4"/>
+                            <constraint firstItem="Y0P-ND-KWF" firstAttribute="leading" secondItem="cmC-f4-2Qb" secondAttribute="trailing" constant="5" id="z1e-cr-K5A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="convertedValueLabel" destination="3sZ-C4-yAH" id="D3n-8s-goe"/>
+                        <outlet property="inputTextField" destination="cmC-f4-2Qb" id="VIP-vz-lwS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
